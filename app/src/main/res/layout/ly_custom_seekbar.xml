@@ -13,4 +13,11 @@
         android:text="Factory的小练习"
         skin:skinEnable="true"
          />
+    <Button
+        android:id="@+id/btn_find_ufo"
+        android:layout_gravity="center|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_ufo"
+        />
 </FrameLayout>

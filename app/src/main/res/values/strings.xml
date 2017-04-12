@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidTest</string>
     <string name="title_activity_thread">ThreadActivity</string>
+    <string name="find_ufo">查找外星人</string>
 </resources>

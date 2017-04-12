@@ -2,16 +2,16 @@ package xaircraft.androidtest;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.view.LayoutInflaterFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.CheckBox;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-import xaircraft.androidtest.TestFragment.FragmentOne;
 import xaircraft.androidtest.Theme.MyInflaterFactory;
 
 public class MainActivity extends Activity {
 
+    private Button btnFindUfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         LayoutInflater inflater = getLayoutInflater();
@@ -19,5 +19,12 @@ public class MainActivity extends Activity {
         inflater.setFactory(factory);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ly_custom_seekbar);
+        btnFindUfo = (Button)findViewById(R.id.btn_find_ufo);
+        btnFindUfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,getString(R.string.find_ufo),Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
